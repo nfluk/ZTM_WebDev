@@ -5,6 +5,8 @@ let h3 = document.querySelector('h3');
 let body = document.body;
 let direction = 'right';
 
+h3.textContent = `background: linear-gradient(to right, #ff0000, #ffff00)`;
+
 btn.addEventListener('click', () => {
   if (direction === 'right') {
     direction = 'left';
@@ -26,8 +28,6 @@ color2.addEventListener('input', () => {
 
 function addCodeSnippet(direction = 'right') {
   let gradient = `linear-gradient(to ${direction}, ${color1.value}, ${color2.value})`;
-  // h3.innerText = '';
-  // h3.appendChild(document.createTextNode(`background: ${gradient});`));
   h3.textContent = `background: ${gradient};`;
   body.style.backgroundImage = gradient;
 }
